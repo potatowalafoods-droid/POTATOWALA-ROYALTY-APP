@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#35117f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="POTATOWALA ROYALTY">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <title>POTATOWALA ROYALTY TRACKER</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #f4f5fa;
+    }
+
+    #appFrame {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      margin: 0;
+      padding: 0;
+      display: block;
+      background: #f4f5fa;
+    }
+
+    #fallback {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      font-family: Arial, sans-serif;
+      background: #f4f5fa;
+      color: #35117f;
+      text-align: center;
+      z-index: -1;
+    }
+
+    #fallback a {
+      color: #35117f;
+      font-weight: 800;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="fallback">
+    <div>
+      <b>POTATOWALA ROYALTY TRACKER</b><br><br>
+      <a href="https://script.google.com/macros/s/AKfycbzLRGwak8mmSQj1q7yMzQpFrjoeqf7ALlF7gkidEbIXRRfJD-Z7XoHQAmV3tUxuwYcf/exec">Open Royalty Tracker</a>
+    </div>
+  </div>
+
+  <iframe
+    id="appFrame"
+    src="https://script.google.com/macros/s/AKfycbzLRGwak8mmSQj1q7yMzQpFrjoeqf7ALlF7gkidEbIXRRfJD-Z7XoHQAmV3tUxuwYcf/exec"
+    title="POTATOWALA ROYALTY TRACKER"
+    allow="clipboard-read; clipboard-write"
+  ></iframe>
+
+  <script>
+    // Remove any old GitHub service workers/caches that may keep the wrong version.
+    (async function () {
+      try {
+        if ("serviceWorker" in navigator) {
+          const regs = await navigator.serviceWorker.getRegistrations();
+          for (const reg of regs) {
+            try { await reg.unregister(); } catch (e) {}
+          }
+        }
+
+        if ("caches" in window) {
+          const names = await caches.keys();
+          for (const name of names) {
+            try { await caches.delete(name); } catch (e) {}
+          }
+        }
+
+        try { localStorage.clear(); } catch (e) {}
+        try { sessionStorage.clear(); } catch (e) {}
+      } catch (e) {
+        console.log(e);
+      }
+    })();
+  </script>
+</body>
+</html>
