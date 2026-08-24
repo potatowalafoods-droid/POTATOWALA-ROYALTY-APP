@@ -1,7 +1,7 @@
 {
-  "name": "POTATOWALA ROYALTY TRACKER",
-  "short_name": "ROYALTY",
-  "description": "POTATOWALA Royalty Tracker",
+  "name": "POTATOWALA ACCESS",
+"short_name": "POTATOWALA ACCESS",
+"description": "POTATOWALA ACCESS",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
